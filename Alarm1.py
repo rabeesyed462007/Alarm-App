@@ -1,7 +1,7 @@
 #Importing all the necessary libraries to form the alarm clock:
 from tkinter import *
 import datetime
-import time
+import time as clock
 import winsound
 def alarm(set_alarm_timer):
     while True:
