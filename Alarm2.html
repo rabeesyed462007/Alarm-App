@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -15,32 +15,68 @@
     
     <button> <a class="nav-link" href="c.html">0C</a></button>
     <style>
-        .form-control{
-            border-radius: 30px;
+        body{
+            height: 100vh;
+            background-color: rgb(35, 39, 42);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-</style>  {}
-
-
-    <div class="container my-3">
-        <h1>Option to set an alarm</h1>
-
-        <form>
-            <div class="form-group">
-                <label for="alarm">Set Alarm</label>
-                <input type="text" class="form-control" id="alarm" name="alarm"
-                    placeholder="Enter the time in yyyy-mm-dd hh:mm:ss">
-
-                <small id="alarmHelp" class="form-text text-muted">We'll never share your alarm with anyone else.</small>
-            </div>
-
-
-            <button id="alarmSubmit" type="submit" class="btn btn-primary">Set Alarm</button>
+        .form-control{
+            border-radius: 30px; 
+            width: 500px;
+            height: 40px;
+            background-color: null;
+            display: flex;
+            align-items: center;
+            
+        }
+        h1{
+            position: absolute;
+            top: 35%;
+            font-size: 50px;
+            color: aqua;
+        }
+        .box{
+            width: 500px;
+            height: 50px;
+            background-color: rgb(35, 39, 42);
+            border-radius: 30px;
+            align-items: center;
+            display: flex;
+            padding: 20px;
+        }
+        .box > button{
+            font-size: 15px;
+            color: #777;
+            flex-direction: row auto;
+            background-color: 
+            border-top-right-radius ;
+        }
+        .box > input{
+            flex: 1;
+            height: 45px;
+            
+        }
+        
+</style>  
+<h1>Set Yor Alarm Here</h1>
+<div class="container my-3">
+    <form>
+    <div class="box">
+                <input type="text" class="form-control" id="alarm" name="alarm" 
+                    placeholder="Enter the time in yyyy-mm-dd hh:mm:ss" style="color: #e2b714;"><script src="js/exp.js"></script>
+                    <button id="alarmSubmit" type="submit" class="btn btn-primary" style="height: 40px;">Set Alarm
+                        </small>
+                    </button>
         </form>
 
         <div class="my-2">
             <ul id="defs"></ul>
         </div>
     </div>
+</div>
+</div> 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -51,78 +87,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
-<!-- <script src="js/tut12.js"></script> -->
-<!-- <script src="js/tut14.js"></script> -->
-<!-- <script src="js/tut15.js"></script> -->
-<!-- <script src="js/tut16.js"></script> -->
-<!-- <script src="js/tut17.js"></script> -->
-<!-- <script src="js/tut18.js"></script> -->
-<!-- <script src="js/tut20.js"></script> -->
-<!-- <script src="js/tut21.js"></script> -->
-<!-- <script src="js/tut23.js"></script> -->
-<!-- <script src="js/tut24.js"></script> -->
-<!-- <script src="js/tut25.js"></script> -->
-<!-- <script src="js/tut27.js"></script> -->
-<!-- <script src="js/tut28.js"></script> -->
-<!-- <script src="js/tut30.js"></script> -->
-<!-- <script src="js/tut31.js"></script> -->
-<!-- <script src="js/tut32.js"></script> -->
-<!-- <script src="js/tut34.js"></script> -->
-<!-- <script src="js/tut37.js"></script> -->
-<!-- <script src="js/tut39.js"></script> -->
-<!-- <script src="js/tut39b.js"></script> -->
-<!-- <script src="js/tut41.js"></script> -->
-<!-- <script src="js/tut43.js"></script> -->
-<!-- <script src="js/tut44.js"></script> -->
-<!-- <script src="js/tut 45.js"></script> -->
-<!-- <script src="js/tut46.js"></script> -->
-<!-- <script src="js/tut47.js"></script> -->
-<!-- <script src="js/tut48.js"></script> -->
-<!-- <script src="js/tut49.js"></script> -->
-<!-- <script src="js/tut51.js"></script> -->
-<!-- <script src="js/tut52.js"></script> -->
-<!-- <script src="js/tut53.js"></script> -->
-<!-- <script src="js/tut54.js"></script> -->
-
+        <script src="./js/2.js">
+        </script>
+</body>    
 </html>
- <script>
-console.log("This is tutorial 54");
-const alarmSubmit = document.getElementById('alarmSubmit');
-
-// Add an event listener to the submit button
-alarmSubmit.addEventListener('click', setAlarm);
-
-var audio = new Audio('https://www.fesliyanstudios.com/play-mp3/4383');
-
-
-
-// function to play the alarm ring tone
-function ringBell() {
-        audio.play(); ('https://www.fesliyanstudios.com/play-mp3/4383')
-}
-
-// looping the alarm ringtone
-audio.loop =true;
-audio.playbackRate = 1;  
-
-// This function will run whenever alarm is set from the UI
-function setAlarm(e) {
-    e.preventDefault();
-    const alarm = document.getElementById('alarm');
-    alarmDate = new Date(alarm.value);
-    console.log(`Setting Alarm for ${alarmDate}...`); 
-    now = new Date();
-    
-// Ringing of alarm on time
-    let timeToAlarm = alarmDate - now;
-var ring = console.log(timeToAlarm);
-    if(timeToAlarm>=0){
-        setTimeout(() => {
-            console.log("Ringing now")
-            ringBell();
-            open('app.html');
-        }, timeToAlarm);
-    }
-}
-</script>
+ <!--line 8 is main -->
+rrrrr
