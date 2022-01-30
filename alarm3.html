@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Clock</title>
+</head>
+<body>
+    <section class="container">
+        <div id="clock"></div>
+        <input onchange="setAlarmTime(this.value)" class="alarm" name="alarmTime"
+        type="datetime-local">
+        <div class="controls">
+            <button id="alarmSubmit" type="submit" class="btn btn-primary">Set Alarm</button>
+        </div>
+        
+<script>const display = document.getElementById('clock');
+
+function updateTime() {
+    const date = new Date();
+
+    const hour = formatTime(date.getHours());
+    const minutes = formatTime(date.getMinutes());
+    const seconds = formatTime(date.getSeconds());
+
+
+
+    display.innerText=`${hour} : ${minutes} : ${seconds}`
+}
+function formatTime(time) {
+    if ( time < 10 ) {
+        return '0' + time;
+    }
+    return time;
+}
+
+
+
+setInterval(updateTime, 1000);
+
+
+
+</script>
+<body></html>
