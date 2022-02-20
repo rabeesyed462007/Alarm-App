@@ -1,3 +1,5 @@
+  fetch("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
 $("input[name=alarm]").clockpicker({       
     placement: 'bottom',
     align: 'left',
@@ -30,6 +32,9 @@ $("input[name=alarm]").clockpicker({
                           },
                           afterDone: function() {
                               console.log("after done");
-                          }
+                          },
+                          writeZero: function() {
+                              var alarm =document.getElementById('alarm').append(':00');
+                              console.log ('added zero');
+                          } 
   });
-  

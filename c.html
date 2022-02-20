@@ -1,21 +1,202 @@
 <!DOCTYPE html>
-<head><meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> </head>
-<body></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Alarms</title>
+</head>
+<body>
 
-<p class="p"  id="p1" >
-      10C
-    </p>
-  <br><br>
-  <button id="alarmSubmit" type="submit" class="btn btn-primary">Set Alarm</button> 
-   
+<div class="header">
+  <h1>Alarm</h1>
+</div>
+
+<div class="all">
+  <div class="box" id="hi">
+    <div class="text">
+      <script>
+        var append = document.write(localStorage.getItem('saved'));
+        function clearSavedAlarm() {
+          hi.remove();
+          (localStorage.clear('saved'));
+        } 
+        function removeNull() {
+          return('append');
+        }
+        if (localStorage.getItem('saved')==null) {
+         removeNull();
+         clearSavedAlarm();
+        }
+      </script>
+    </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x">x</button>
+  </div>
+  <div class="box" id="hello">
+    <div class="text">
+     hero is my name
+    </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>    
+  </div>
+  <div class="addButton">
+    <form action="/alarm2.html" style="border-radius:30px;"> <button class="addAlarm"><h1>+</h1</button></form></div> 
+</div>
+
+  <style>
+    body{
+        margin: 0%;
+        height: 200vh;
+        background-color: rgb(35, 39, 42);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
   
+
+    .header {
+      position: fixed;
+      z-index: 1000;
+      height: 50px;
+      width: 100%; 
+      padding: 18px;
+      -webkit-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      -moz-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      -o-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+    }
+
+    .active {
+      background-color: rgba(40, 40, 40);
+    }
+
+    .all{
+      position: relative;
+      top: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      length: 100 auto;
+    }
+
+    .box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      width: 150%;
+      border-radius: 25px;
+      background: aqua;
+      margin: 2%;
+    }
+
+    .text{
+      color: #e2b714;
+      font-size: x-large;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    .addButton > form > .addAlarm {
+      display: flex;
+      border-radius: 100px;
+      height: 50px;
+      width: 50px;
+      background-color: #2196F3;
+      position: relative;
+      top: 90%;
+    }
+
+    form > .addAlarm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+  </style>
+
+<script> 
+var xbtn = document.getElementById('x').addEventListener('click', clearSavedAlarm);
+var hi = document.getElementById('hi');
+var hello = document.getElementById('hello');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// script for header animation  
+  $(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 5) {
+            $(".header").addClass("active");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $(".header").removeClass("active");
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-  
-
-
