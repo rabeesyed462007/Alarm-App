@@ -46,11 +46,11 @@ function alarmPage() {
  }
 
 // looping the alarm ringtone
- // audio.loop =true;
- // audio.playbackRate = 1; 
- function audioloop() {
-      setInterval(ringBell, 10)
- }
+  audio.loop =true;
+  audio.playbackRate = 1; 
+  function audioloop() {
+       setInterval(ringBell, 10)
+  }
 
   
 
@@ -80,6 +80,7 @@ function savedAlarm() {
 
 
  // try making v1 and v2 of js
- 
-
-
+ // SavedAlarm
+// Setalarm
+//
+//
