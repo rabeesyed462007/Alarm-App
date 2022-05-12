@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stopwatch</title>
+
+    
+</head>
+<body>
+
+    <div class="container">
+        <br><br><br><br><br><br><br>
+        
+        <div id="display">
+            
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reset()">Reset</button>
+        </div>
+
+    </div>
+    <style>
+        #startStop{
+            background-color: blue;
+            border-radius:5px; 
+            border: none;
+        }
+        #reset{
+            background-color: blue;
+        border-radius:5px; 
+    border: none;       }
+    body{
+        background-color: black;
+    }
+    #display{
+        color:white;
+    }
+    </style>
+    <script>
+        //Define vars to hold time values
+             
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+//Define vars to hold "display" value
+
+let displaySeconds = 0;
+let displayMinutes = 0;
+let displayHours = 0;
+
+//Define var to hold setInterval() function
+let interval = null;
+
+//Define var to hold stopwatch status
+let status = "stopped";
+
+//Stopwatch function (logic to determine when to increment next value, etc.)
+function stopWatch(){
+
+    seconds++;
+
+    //Logic to determine when to increment next value
+    if(seconds / 60 === 1){
+        seconds = 0;
+        minutes++;
+
+        if(minutes / 60 === 1){
+            minutes = 0;
+            hours++;
+        }
+
+    }
+
+    //If seconds/minutes/hours are only one digit, add a leading 0 to the value
+    if(seconds < 10){
+        displaySeconds = "0" + seconds.toString();
+    }
+    else{
+        displaySeconds = seconds;
+    }
+
+    if(minutes < 10){
+        displayMinutes = "0" + minutes.toString();
+    }
+    else{
+        displayMinutes = minutes;
+    }
+
+    if(hours < 10){
+        displayHours = "0" + hours.toString();
+    }
+    else{
+        displayHours = hours;
+    }
+
+    //Display updated time values to user
+    document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+
+}
+
+
+
+function startStop(){
+
+    if(status === "stopped"){
+
+        //Start the stopwatch (by calling the setInterval() function)
+        interval = window.setInterval(stopWatch, 1000);
+        document.getElementById("startStop").innerHTML = "Stop";
+        status = "started";
+
+    }
+    else{
+
+        window.clearInterval(interval);
+        document.getElementById("startStop").innerHTML = "Start";
+        status = "stopped";
+
+    }
+
+}
+
+//Function to reset the stopwatch
+function reset(){
+
+    window.clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    document.getElementById("display").innerHTML = "00:00:00";
+    document.getElementById("startStop").innerHTML = "Start";
+
+}
+    </script>
+    <style>
+        .container{
+    height: 300px;
+    width: 100%;
+}
+
+#display{
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.buttons{
+    text-align: center;
+    
+}
+    </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+     body {
+       margin: 0;
+       font-family: Arial, Helvetica, sans-serif;
+       background-color: black;
+     }
+     
+     .navbar {
+       
+       background-color: white;
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+     }
+     .navbar a {
+       float:left;
+       display: block;
+       color: black;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+       font-size: 17px;
+     }
+     
+     
+     .navbar a:hover {
+       background: #f1f1f1;
+       color: black;
+     }
+     
+     
+     
+     .main {
+       padding: 16px;
+       margin-bottom: 10px;
+     }
+     .adj{
+         height: 20px;
+     }
+     </style>
+     </head>
+     <body>
+     
+     <div class="navbar">
+       <a href="index.html" class="active">Home</a>
+       <a href="#news">alarm</a>
+       <a href="hello.html">stopWatch</s></a>
+     </div>
+     
+    
+</body>
+</html>
