@@ -30,7 +30,7 @@ const savedAlarms = document.getElementById('savedAlarms')
 savedAlarms.addEventListener('click', alarmPage)
 alarmSubmit.addEventListener('click', setAlarm);
 alarmSubmit.addEventListener('click', savedAlarm)
-alarmSubmit.addEventListener('click', alarmPage);
+// alarmSubmit.addEventListener('click', alarmPage);
 
  var audio = new Audio('https://www.fesliyanstudios.com/play-mp3/4383');
 
@@ -41,16 +41,16 @@ function alarmPage() {
 }
 
 // function to play the alarm ring tone
- function ringBell() {
+// function ringBell() {
        // audio.play(); ('https://www.fesliyanstudios.com/play-mp3/4383');
- }
+// }
 
 // looping the alarm ringtone
-  audio.loop =true;
-  audio.playbackRate = 1; 
-  function audioloop() {
-       setInterval(ringBell, 10)
-  }
+ // audio.loop =true;
+ // audio.playbackRate = 1; 
+ // function audioloop() {
+   //    setInterval(ringBell, 10)
+ // }
 
   
 
@@ -68,7 +68,7 @@ var ring = console.log(timeToAlarm);
     if(timeToAlarm>=0){
         setTimeout(() => {
             console.log("Ringing now")
-            audioloop();
+           // audioloop();
             open('app.html')
         }, timeToAlarm);
     }
@@ -81,6 +81,6 @@ function savedAlarm() {
 
  // try making v1 and v2 of js
  // SavedAlarm
-// Setalarm
+// setalarm
 //
 //
