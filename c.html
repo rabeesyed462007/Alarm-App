@@ -34,20 +34,23 @@ var bro6 = localStorage.getItem('bro6');
 
 <div class="all">
   <div class="box" id="div1">
-      <input value=""  id="old1" class="old" type="datetime-local">
-      <label class="switch">
-      <input type="checkbox" checked id="meta1">
-      <span class="slider round"></span>
-      </label><input id="m" type="checkbox"><input id="t" type="checkbox"><input id="w" type="checkbox"><input id="th" type="checkbox"><input id="f" type="checkbox"><input id="sa" type="checkbox"><input id="su" type="checkbox">    
-      <button class="x" id="x1">✕</button>
+    <input value=""  id="old1" class="old" type="datetime-local">
+    <label class="switch">
+    <input type="checkbox" checked id="meta1">
+    <span class="slider round"></span>
+    </label>
+    <button class="x" id="x1">&#x2715 </button><input class="anas" id="anas" type="checkbox" id="toggle">
+    <label for="anas">Click me!</label>
   </div>
+    <div class="bhai unactive" id="bhai"><div class="no" id="no"> <input id="m" type="checkbox"><input id="t" type="checkbox"><input id="w" type="checkbox"><input id="th" type="checkbox"><input id="f" type="checkbox"><input id="sa" type="checkbox"><input id="su" type="checkbox"></div></div>
+  
   <div class="box" id="div2">
       <input value=""  id="old2" class="old" type="datetime-local"> 
       <label class="switch">
       <input type="checkbox" id="meta2">
       <span class="slider round"></span>
       </label>    
-      <button class="x" id="x2">✕</button>
+      <button class="x" id="x2"></button>
   </div>
   <div class="box" id="div3">
       <input value=""  id="old3" class="old" type="datetime-local"> 
@@ -55,7 +58,7 @@ var bro6 = localStorage.getItem('bro6');
       <input type="checkbox" id="meta3">
       <span class="slider round"></span>
       </label>    
-      <button class="x" id="x3" >✕</button>
+      <button class="x" id="x3" ></button>
   </div>
   <div class="box" id="div4">
       <input value=""  id="old4" class="old" type="datetime-local"> 
@@ -63,7 +66,7 @@ var bro6 = localStorage.getItem('bro6');
       <input type="checkbox" id="meta4">
       <span class="slider round"></span>
       </label>    
-      <button class="x" id="x4" >✕</button>
+      <button class="x" id="x4" ></button>
   </div>
   <div class="box" id="div5">
       <input value=""  id="old5" class="old" type="datetime-local"> 
@@ -71,7 +74,7 @@ var bro6 = localStorage.getItem('bro6');
       <input type="checkbox" id="meta5">
       <span class="slider round"></span>
       </label>    
-      <button class="x" id="x5" >✕</button>
+      <button class="x" id="x5" ></button>
   </div>
   <div class="box" id="div6">
       <input value=""  id="old6" class="old" type="datetime-local"> 
@@ -79,7 +82,7 @@ var bro6 = localStorage.getItem('bro6');
       <input type="checkbox" id="meta6">
       <span class="slider round"></span>
       </label>    
-      <button class="x" id="x6" >✕</button>
+      <button class="x" id="x6" ></button>
   </div>
 
   <div class="addButton">
@@ -226,8 +229,8 @@ function showDiv1() {
     }
 
     .active {
-      background-color: rgba(40, 40, 40);
-    }
+      background-color: rgba(80, 80, 80);
+     } 
 
     .all{
       position: relative;
@@ -237,26 +240,106 @@ function showDiv1() {
       align-items: center;
       width: 100%;
       height: 100%;
-      background-color: wheat;
     }
 
     .box{
-      display: flex;
-      align-items: center;
+      display: flex;                                                      
+      align-items: center;                          
+      justify-content: center;                          
+      height: 100px;                          
+      width: 95%;                         
+      border-top-left-radius: 25px;                         
+      border-top-right-radius: 25px;                          
+      border-bottom-left-radius: 25px;                          
+      border-bottom-right-radius: 25px;                         
+      background: aqua;                         
+      margin-top: 2%;                         
+      color: #e2b714;        
+                       
+    }
+    .box.active{
+    
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .bhai { 
+      /* display: flex;
       justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 95%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      background: red;
+      color: #e2b714;
+      margin-top: none;
+      margin-bottom: 2%;
+      position: relative;
+      top: -100px;
+      border-radius: 25px;
+      z-index: -1;
+      display: none; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100px;
       width: 95%;
-      border-radius: 25px;
-      background: aqua;
-      margin: 2%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
       color: #e2b714;
+      margin-top: none;
+      margin-bottom: 2%;
+      justify-content: space-around; 
+      align-items: center;
+      display: none;
+      background: black;
     }
-
+    
+    .bhai.active {
+      /* border-top-right-radius: 0px;
+      border-top-left-radius: 0px; 
+      position: relative;
+      top: 0px;
+      display: flex; */
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      position: relative;
+      top: 0px;
+      display: flex;
+      justify-content: space-around; 
+      align-items: center;
+      background: black;
+    }
+    /* .no {
+      display: flex;
+      height: 30px;
+      width: inherit;
+      justify-content: space-around; 
+      align-items: center;
+      background: black;
+    }  */
     .old {
       padding-left: 12px;
       width: 150px;
       
     }    
+
+    .anas {
+       position: absolute;
+	   top: -9999px;
+	   left: -9999px;
+    }
+    
+    label {
+	display: block;
+	background: #08C;
+	padding: 5px;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px;
+	color: white;
+	font-weight: bold;
+}
+
 
     .switch {
       position: relative;

@@ -1,4 +1,4 @@
-// Flat Pickr Configuration:
+// Flat Pickr Configuration
 var config = {
     enableTime: true,
     time_24hr: true,
@@ -7,6 +7,7 @@ var config = {
     maxDate: new Date().fp_incr(7), // 7 days from now
 };
 flatpickr(".old", config);
+
 
 function toggle(b){b.value=(b.value=="ON")?"OFF":"ON";}
 

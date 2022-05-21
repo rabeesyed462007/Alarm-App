@@ -252,3 +252,32 @@ meta4.addEventListener('change', rupya4);
 meta5.addEventListener('change', rupya5);
 meta6.addEventListener('change', rupya6);
 console.log(bro1);
+
+var bhai =  document.getElementById('bhai');
+var div = document.getElementById('div1');
+
+function noice() {
+     div.classList.add('active');
+}
+
+function razor(a) {
+    a.classList.add('active');
+    div.classList.add('active');
+}
+function knife(a) {
+    a.classList.remove('active');
+    div.classList.remove('active');
+}
+
+setInterval(() => {
+    checkDaysSelected();
+}, 60000);
+
+var anas = document.getElementById('anas'); anas.addEventListener('change', rabee)
+
+function rabee() {
+  if (this.checked) {
+    razor(bhai);
+  } else { 
+     knife(bhai);
+  } }
