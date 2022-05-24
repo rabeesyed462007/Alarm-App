@@ -202,7 +202,7 @@ else { if (friday.checked && d1==5 && old1.value!=undefined) {
 else { if (saturday.checked && d1==6 && old1.value!=undefined) {
     setAlarm1();
 }
-else { if (sunday.checked && d1==7 && old1.value!=undefined) {
+else { if (sunday.checked && d1==0 && old1.value!=undefined) {
     setAlarm1();
 } } } } } }}
 }  
