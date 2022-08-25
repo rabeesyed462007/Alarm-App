@@ -217,49 +217,49 @@ var monday1 = document.getElementById('m1');
     var sunday6 = document.getElementById('su6');
 
 // Day Selector Function:
-function checkDaysSelected() {
+
     var d1 = d.getDay();
-    if (monday1.checked && d1==1 && old1.value!=undefined || tuesday1.checked && d1==2 && old1.value!=undefined || 
+   function checkDaysSelected () { if (monday1.checked && d1==1 && old1.value!=undefined || tuesday1.checked && d1==2 && old1.value!=undefined || 
         wednesday1.checked && d1==3 && old1.value!=undefined || thursday1.checked && d1==4 && old1.value!=undefined || 
         friday1.checked && d1==5 && old1.value!=undefined || saturday1.checked && d1==6 && old1.value!=undefined || 
         sunday1.checked && d1==0 && old1.value!=undefined) {
     setAlarm1();
-}
-else { if (monday2.checked && d1==1 && old2.value!=undefined || tuesday2.checked && d1==2 && old2.value!=undefined || 
+}}
+ function checkDaysSelected2 () { if (monday2.checked && d1==1 && old2.value!=undefined || tuesday2.checked && d1==2 && old2.value!=undefined || 
            wednesday2.checked && d1==3 && old2.value!=undefined || thursday2.checked && d1==4 && old2.value!=undefined || 
            friday2.checked && d1==5 && old2.value!=undefined || saturday2.checked && d1==6 && old2.value!=undefined || 
            sunday2.checked && d1==0 && old2.value!=undefined) {
     setAlarm2();
-}
-else { if (monday3.checked && d1==1 && old3.value!=undefined || tuesday3.checked && d1==2 && old3.value!=undefined || 
+}}
+function checkDaysSelected3 () { if (monday3.checked && d1==1 && old3.value!=undefined || tuesday3.checked && d1==2 && old3.value!=undefined || 
            wednesday3.checked && d1==3 && old3.value!=undefined || thursday3.checked && d1==4 && old3.value!=undefined || 
            friday3.checked && d1==5 && old3.value!=undefined || saturday3.checked && d1==6 && old3.value!=undefined || 
            sunday3.checked && d1==0 && old3.value!=undefined) {
     setAlarm3();
-}
-else { if(monday4.checked && d1==1 && old4.value!=undefined || tuesday4.checked && d1==2 && old4.value!=undefined || 
+}}
+function checkDaysSelected4 () { if(monday4.checked && d1==1 && old4.value!=undefined || tuesday4.checked && d1==2 && old4.value!=undefined || 
           wednesday4.checked && d1==3 && old4.value!=undefined || thursday4.checked && d1==4 && old4.value!=undefined || 
           friday4.checked && d1==5 && old4.value!=undefined || saturday4.checked && d1==6 && old4.value!=undefined || 
           sunday4.checked && d1==0 && old4.value!=undefined) {
     setAlarm4();
-}
-else { if (monday5.checked && d1==1 && old5.value!=undefined || tuesday5.checked && d1==2 && old5.value!=undefined || 
+}}
+function checkDaysSelected5 () { if (monday5.checked && d1==1 && old5.value!=undefined || tuesday5.checked && d1==2 && old5.value!=undefined || 
            wednesday5.checked && d1==3 && old5.value!=undefined || thursday5.checked && d1==4 && old5.value!=undefined || 
            friday5.checked && d1==5 && old5.value!=undefined || saturday5.checked && d1==6 && old5.value!=undefined || 
            sunday5.checked && d1==0 && old5.value!=undefined) {
     setAlarm5();
-}
-else { if (monday6.checked && d1==1 && old6.value!=undefined || tuesday6.checked && d1==2 && old6.value!=undefined || 
+}}
+function checkDaysSelected6 () { if (monday6.checked && d1==1 && old6.value!=undefined || tuesday6.checked && d1==2 && old6.value!=undefined || 
            wednesday6.checked && d1==3 && old6.value!=undefined || thursday6.checked && d1==4 && old6.value!=undefined || 
            friday6.checked && d1==5 && old6.value!=undefined || saturday6.checked && d1==6 && old6.value!=undefined || 
            sunday6.checked && d1==0 && old6.value!=undefined) {
     setAlarm6();
-}
+}}
 // else { if (days[6].checked && d1==0 && old1.value!=undefined) {
 //     setAlarm1();
 // }} 
-} } } }}
-}  
+  
+
 
 function rupya1() {if (meta1.checked) {
     checkDaysSelected();
@@ -268,31 +268,31 @@ function rupya1() {if (meta1.checked) {
   }}
 
  function rupya2() {if (meta2.checked) {
-    checkDaysSelected();
+    checkDaysSelected2();
   } else {
     console.log("Checkbox is not checked..");
   }}
 
  function rupya3() {if (meta3.checked) {
-    checkDaysSelected();
+    checkDaysSelected3();
   } else {
     console.log("Checkbox is not checked..");
   }}
 
  function rupya4() {if (meta4.checked) {
-    checkDaysSelected();
+    checkDaysSelected4();
   } else {
     console.log("Checkbox is not checked..");
   }}
 
  function rupya5() {if (meta5.checked) {
-    checkDaysSelected();
+    checkDaysSelected5();
   } else {
     console.log("Checkbox is not checked..");
   }}
 
  function rupya6() {if (meta6.checked) {
-    checkDaysSelected();
+    checkDaysSelected6();
   } else {
     console.log("Checkbox is not checked..");
   }}

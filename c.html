@@ -43,7 +43,7 @@ var bro6 = localStorage.getItem('bro6');
     <input class="anas" id="anas1" type="checkbox" id="toggle">
     <label for="anas1"><i class="arrow"></i></label>
   </div>
-  <div class="bhai unactive" id="bhai1">
+  <div class="bhai" id="bhai1">
     <input id="m1" type="checkbox"><input id="t1" type="checkbox"><input id="w1" type="checkbox"><input id="th1" type="checkbox">
     <input id="f1" type="checkbox"><input id="sa1" type="checkbox"><input id="su1" type="checkbox">
   </div>
@@ -173,35 +173,71 @@ var x6 = document.getElementById('x6').addEventListener('click',hideDiv6);
 addAlarm.addEventListener('click', showDiv1);
 
 // xbtn querySelector:
-document.querySelector('#x1').addEventListener('click', clearSavedAlarm);
+document.getElementById('x1').addEventListener('click', clearSavedAlarm1);
+document.getElementById('x2').addEventListener('click', clearSavedAlarm2);
+document.getElementById('x3').addEventListener('click', clearSavedAlarm3);
+document.getElementById('x4').addEventListener('click', clearSavedAlarm4);
+document.getElementById('x5').addEventListener('click', clearSavedAlarm5);
+document.getElementById('x6').addEventListener('click', clearSavedAlarm6);
 
-// clearSavedAlarm:
+// clearSavedAlarm: #Work is to be done here - use old1,old2 etc.
 var zero = null
 var old = document.getElementById('old')
-function clearSavedAlarm() {
-   // div1.remove();
-    (localStorage.clear('saved'));
-    old.value = ''
+function clearSavedAlarm1() {
+   localStorage.removeItem("bro1");
+    old1.value = ''
+  } 
+function clearSavedAlarm2() {
+   localStorage.removeItem("bro2");
+    old2.value = ''
+  } 
+function clearSavedAlarm3() {
+   localStorage.removeItem("bro3");
+    old3.value = ''
+  } 
+function clearSavedAlarm4() {
+   localStorage.removeItem("bro4");
+    old4.value = ''
+  } 
+function clearSavedAlarm5() {
+   localStorage.removeItem("bro5");
+    old5.value = ''
+  } 
+function clearSavedAlarm6() {
+   localStorage.removeItem("bro6");
+    old6.value = ''
   } 
 
 // hideDiv:
   function hideDiv1() {
     div1.style.display = 'none';
+    bhai1.classList.remove('active');
+    div1.classList.remove('active')
   }
   function hideDiv2() {
     div2.style.display = 'none';
+    bhai2.classList.remove('active');
+    div2.classList.remove('active')
   }
   function hideDiv3() {
     div3.style.display = 'none';
+    bhai3.classList.remove('active');
+    div3.classList.remove('active')
   }
   function hideDiv4() {
     div4.style.display = 'none';
+    bhai4.classList.remove('active');
+    div4.classList.remove('active')
   }
   function hideDiv5() {
     div5.style.display = 'none';
+    bhai5.classList.remove('active');
+    div5.classList.remove('active')
   }
   function hideDiv6() {
     div6.style.display = 'none';
+    bhai6.classList.remove('active');
+    div6.classList.remove('active')
   }
 
  // showDiv:
