@@ -1,1 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Alarms</title>
+  <!--FlatPickr-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
 
+<script>
+var bro1 = localStorage.getItem('bro1');
+var bro2 = localStorage.getItem('bro2');
+var bro3 = localStorage.getItem('bro3');
+var bro4 = localStorage.getItem('bro4');
+var bro5 = localStorage.getItem('bro5');
+var bro6 = localStorage.getItem('bro6');
+</script>
+<script>// New Code!
+  // functions:
+  var nun = localStorage.getItem('saved');
+  </script>
+
+<div class="header">
+  <h1>Alarm</h1>
+
+  <button class="s">points : 300</button>
+<center> <button style="background-color: #2196F3; position:relative;">level : 3</button> </center>
+</div>
+
+<div class="all">
+  <div class="box" id="div1">
+    <input value=""  id="old1" class="old" type="datetime-local">
+    <label class="switch">
+    <input type="checkbox" checked id="meta1">
+    <span class="slider round"></span>
+    </label>
+    <button class="x" id="x1">&#x2715</button>
+    <input class="anas" id="anas1" type="checkbox" id="toggle">
+    <label for="anas1"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai" id="bhai1">
+    <input id="m1" type="checkbox"><input id="t1" type="checkbox"><input id="w1" type="checkbox"><input id="th1" type="checkbox">
+    <input id="f1" type="checkbox"><input id="sa1" type="checkbox"><input id="su1" type="checkbox">
+  </div>
+  
+  <div class="box" id="div2">
+    <input value=""  id="old2" class="old" type="datetime-local"> 
+    <label class="switch">
+    <input type="checkbox" id="meta2">
+    <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x2">&#x2715</button></button>
+    <input class="anas" id="anas2" type="checkbox" id="toggle">
+    <label for="anas2"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai unactive" id="bhai2">
+    <input id="m2" type="checkbox"><input id="t2" type="checkbox"><input id="w2" type="checkbox"><input id="th2" type="checkbox">
+    <input id="f2" type="checkbox"><input id="sa2" type="checkbox"><input id="su2" type="checkbox">
+  </div>
+
+  <div class="box" id="div3">
+    <input value=""  id="old3" class="old" type="datetime-local"> 
+    <label class="switch">
+    <input type="checkbox" id="meta3">
+    <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x3" >&#x2715</button></button>
+    <input class="anas" id="anas3" type="checkbox" id="toggle">
+    <label for="anas3"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai unactive" id="bhai3">
+    <input id="m3" type="checkbox"><input id="t3" type="checkbox"><input id="w3" type="checkbox"><input id="th3" type="checkbox">
+    <input id="f3" type="checkbox"><input id="sa3" type="checkbox"><input id="su3" type="checkbox">
+  </div>
+
+  <div class="box" id="div4">
+    <input value=""  id="old4" class="old" type="datetime-local"> 
+    <label class="switch">
+    <input type="checkbox" id="meta4">
+    <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x4" >&#x2715</button></button>
+    <input class="anas" id="anas4" type="checkbox" id="toggle">
+    <label for="anas4"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai unactive" id="bhai4">
+    <input id="m4" type="checkbox"><input id="t4" type="checkbox"><input id="w4" type="checkbox"><input id="th4" type="checkbox">
+    <input id="f4" type="checkbox"><input id="sa4" type="checkbox"><input id="su4" type="checkbox">
+  </div>
+
+  <div class="box" id="div5">
+    <input value=""  id="old5" class="old" type="datetime-local"> 
+    <label class="switch">
+    <input type="checkbox" id="meta5">
+    <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x5" >&#x2715</button></button>
+    <input class="anas" id="anas5" type="checkbox" id="toggle">
+    <label for="anas5"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai unactive" id="bhai5">
+    <input id="m5" type="checkbox"><input id="t5" type="checkbox"><input id="w5" type="checkbox"><input id="th5" type="checkbox">
+    <input id="f5" type="checkbox"><input id="sa5" type="checkbox"><input id="su5" type="checkbox">
+  </div>
+
+  <div class="box" id="div6">
+    <input value=""  id="old6" class="old" type="datetime-local"> 
+    <label class="switch">
+    <input type="checkbox" id="meta6">
+    <span class="slider round"></span>
+    </label>    
+    <button class="x" id="x6" >&#x2715</button></button>
+    <input class="anas" id="anas6" type="checkbox" id="toggle">
+    <label for="anas6"><i class="arrow"></i></label>
+  </div>
+  <div class="bhai unactive" id="bhai6">
+    <input id="m6" type="checkbox"><input id="t6" type="checkbox"><input id="w6" type="checkbox"><input id="th6" type="checkbox">
+    <input id="f6" type="checkbox"><input id="sa6" type="checkbox"><input id="su6" type="checkbox">
+  </div>
+
+  <div class="addButton">
+<button id="addAlarm" class="addAlarm"><h1>+</h1></button></div> 
+</div>
+
+<script>
+// getElementById
+  var xbtn = document.querySelectorAll('#x');
+  var div1 = document.getElementById('div1');
+  var div2 = document.getElementById('div2');
+  var div3 = document.getElementById('div3');
+  var div4 = document.getElementById('div4');
+  var div5 = document.getElementById('div5');
+  var div6 = document.getElementById('div6');
+  var addAlarm = document.getElementById('addAlarm');
+
+ // function showDiv() {
+ //for (let i = 0; i < div1.length; i++) {
+ //    div1[i].style.display = 'block';
+ //}
+ //for (let i = 0; i < div1.length; i++) {
+ //    div1[i].style.display = 'flex';
+ //}
+ // } showDiv();
+//
+ // 
+ // function hideDiv() {
+ //for (let i = 0; i < div1.length; i++) {
+ //    div1[i].style.display = 'none';
+ //}
+//}
+//
+ // for (let i = 0; i < xbtn.length; i++) {
+ //    xbtn[i].addEventListener("click", hideDiv);
+ //}
+//
+ //for (let i = 0; i < xbtn.length; i++) {
+ //    xbtn[i].addEventListener("click", clearSavedAlarm);
+ //}
+</script>
+<script>
+// xbtn:  
+var x1 = document.getElementById('x1').addEventListener('click',hideDiv1);
+var x2 = document.getElementById('x2').addEventListener('click',hideDiv2);
+var x3 = document.getElementById('x3').addEventListener('click',hideDiv3);
+var x4 = document.getElementById('x4').addEventListener('click',hideDiv4);
+var x5 = document.getElementById('x5').addEventListener('click',hideDiv5);
+var x6 = document.getElementById('x6').addEventListener('click',hideDiv6);
+addAlarm.addEventListener('click', showDiv1);
+
+// xbtn querySelector:
+document.getElementById('x1').addEventListener('click', clearSavedAlarm1);
+document.getElementById('x2').addEventListener('click', clearSavedAlarm2);
+document.getElementById('x3').addEventListener('click', clearSavedAlarm3);
+document.getElementById('x4').addEventListener('click', clearSavedAlarm4);
+document.getElementById('x5').addEventListener('click', clearSavedAlarm5);
+document.getElementById('x6').addEventListener('click', clearSavedAlarm6);
+
+// clearSavedAlarm: #Work is to be done here - use old1,old2 etc.
+var zero = null
+var old = document.getElementById('old')
+function clearSavedAlarm1() {
+   localStorage.removeItem("bro1");
+    old1.value = ''
+  } 
+function clearSavedAlarm2() {
+   localStorage.removeItem("bro2");
+    old2.value = ''
+  } 
+function clearSavedAlarm3() {
+   localStorage.removeItem("bro3");
+    old3.value = ''
+  } 
+function clearSavedAlarm4() {
+   localStorage.removeItem("bro4");
+    old4.value = ''
+  } 
+function clearSavedAlarm5() {
+   localStorage.removeItem("bro5");
+    old5.value = ''
+  } 
+function clearSavedAlarm6() {
+   localStorage.removeItem("bro6");
+    old6.value = ''
+  } 
+
+// hideDiv:
+  function hideDiv1() {
+    div1.style.display = 'none';
+    bhai1.classList.remove('active');
+    div1.classList.remove('active')
+  }
+  function hideDiv2() {
+    div2.style.display = 'none';
+    bhai2.classList.remove('active');
+    div2.classList.remove('active')
+  }
+  function hideDiv3() {
+    div3.style.display = 'none';
+    bhai3.classList.remove('active');
+    div3.classList.remove('active')
+  }
+  function hideDiv4() {
+    div4.style.display = 'none';
+    bhai4.classList.remove('active');
+    div4.classList.remove('active')
+  }
+  function hideDiv5() {
+    div5.style.display = 'none';
+    bhai5.classList.remove('active');
+    div5.classList.remove('active')
+  }
+  function hideDiv6() {
+    div6.style.display = 'none';
+    bhai6.classList.remove('active');
+    div6.classList.remove('active')
+  }
+
+ // showDiv:
+function showDiv1() {
+ if (document.getElementById('div1').style.display=='none') {
+   div1.style.display = 'block';
+   div1.style.display = 'flex';
+ }
+ else{
+   if (document.getElementById('div2').style.display=='none') {
+  div2.style.display="block";
+  div2.style.display = 'flex';
+}
+  else{ 
+    if (document.getElementById('div3').style.display=='none') {
+    div3.style.display="block";
+    div3.style.display = 'flex'; 
+  }
+    else {
+      if (document.getElementById('div4').style.display=='none') {
+    div4.style.display="block";
+    div4.style.display = 'flex'; 
+  }
+      else{
+        if (document.getElementById('div5').style.display=='none') {
+    div5.style.display="block";
+    div5.style.display = 'flex';
+      } else {
+          if (document.getElementById('div6').style.display=='none') {
+    div6.style.display="block";
+    div6.style.display = 'flex';}
+    }
+  }
+    }
+}}}
+
+</script>
+  <style>
+    body{
+        margin: 0%;
+        height: 200vh;
+        background-color: rgb(35, 39, 42);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  .s{
+    float: right;
+    background-color: #2196F3;
+  }
+
+    .header {
+      position: fixed;
+      z-index: 1000;
+      height: 50px;
+      width: 100%; 
+      padding: 18px;
+      -webkit-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      -moz-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      -o-transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+      transition: all cubic-bezier(0, -0.09, 0, 1.01) .2s;
+    }
+
+    .active {
+      background-color: rgba(80, 80, 80);
+     } 
+
+    .all{
+      position: relative;
+      top: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box{
+      display: flex;                                                      
+      align-items: center;                          
+      justify-content: center;                          
+      height: 100px;                          
+      width: 95%;                         
+      border-top-left-radius: 25px;                         
+      border-top-right-radius: 25px;                          
+      border-bottom-left-radius: 25px;                          
+      border-bottom-right-radius: 25px;                         
+      background: aqua;                         
+      margin-top: 2%;                         
+      color: #e2b714;        
+                       
+    }
+    .box.active{
+    
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .bhai { 
+      /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 95%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      background: red;
+      color: #e2b714;
+      margin-top: none;
+      margin-bottom: 2%;
+      position: relative;
+      top: -100px;
+      border-radius: 25px;
+      z-index: -1;
+      display: none; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 95%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      color: #e2b714;
+      margin-top: none;
+      margin-bottom: 2%;
+      justify-content: space-around; 
+      align-items: center;
+      display: none;
+      background: black;
+    }
+    
+    .bhai.active {
+      /* border-top-right-radius: 0px;
+      border-top-left-radius: 0px; 
+      position: relative;
+      top: 0px;
+      display: flex; */
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      position: relative;
+      top: 0px;
+      display: flex;
+      justify-content: space-around; 
+      align-items: center;
+      background: black;
+    }
+    /* .no {
+      display: flex;
+      height: 30px;
+      width: inherit;
+      justify-content: space-around; 
+      align-items: center;
+      background: black;
+    }  */
+    .old {
+      padding-left: 12px;
+      width: 150px;
+      
+    }    
+
+    .anas {
+       position: absolute;
+	   top: -9999px;
+	   left: -9999px;
+    }
+    
+    label {
+	display: block;
+	background: #08C;
+	padding: 5px;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px;
+	color: white;
+	font-weight: bold;
+}
+
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+}
+
+    .addButton  > .addAlarm {
+      display: flex;
+      border-radius: 100px;
+      height: 50px;
+      width: 50px;
+      background-color: wheat;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      top: 90%;
+      
+
+    }
+
+    .form-control {
+      background: transparent;
+      border: none;
+    }
+  </style>
+
+<!--Jquery--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+// script for header animation  
+  $(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 5) {
+            $(".header").addClass("active");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $(".header").removeClass("active");
+        }
+    });
+});
+</script>
+<!--FlatPickr-->
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script defer src="c.js"></script>
+<script defer src="cc.js"></script>  
+</body>
+</html>
